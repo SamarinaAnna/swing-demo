@@ -13,6 +13,11 @@ plugins {
   id "edu.sc.seis.launch4j" version "2.4.9"
 }
 
+tasks.withType(Test) {
+    scanForTestClasses = false
+    include "**/*Test.class" // whatever Ant pattern matches your test class files
+}
+
 
 // In this section you declare where to find the dependencies of your project
 repositories {
